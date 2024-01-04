@@ -94,7 +94,7 @@ document.querySelector(".btn-hold").addEventListener("click", function () {
             scores[activePlayer];
 
         // Уг тоглогч хожсон эсэхийг шалгах.
-        if (scores[activePlayer] >= 20) {
+        if (scores[activePlayer] >= 100) {
             // Тоглоомыг дууссан төлөв оруулна.
             isNewGame = false;
             document.getElementById("name-" + activePlayer).textContent =
@@ -108,6 +108,7 @@ document.querySelector(".btn-hold").addEventListener("click", function () {
             activePlayer === 0 ? (activePlayer = 1) : (activePlayer = 0);
             document.getElementById("name-" + activePlayer).textContent =
                 "LOSER";
+            diceDom.style.display = "none";
         } else {
             // Тоглогчийн ээлжийг солино.
             switchToNextPLayer();
